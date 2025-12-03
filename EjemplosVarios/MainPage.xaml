@@ -4,10 +4,16 @@
              x:Class="EjemplosVarios.MainPage"
              Title="Ejemplos MAUI"
              xmlns:dibujable="clr-namespace:EjemplosVarios.Dibujables">
-    <ContentPage.Resources>
-        <dibujable:DibujoReloj x:Key="dReloj" />
-    </ContentPage.Resources>
-    <GraphicsView Drawable="{StaticResource dReloj}" x:Name="relojGraphicsView">
-        
-    </GraphicsView>
+    <VerticalStackLayout>
+        <Label 
+            Text="¡Bienvenido a MAUI!"
+            FontSize="32"
+            HorizontalOptions="Center"
+            Margin="0,20,0,20"/>
+        <Button 
+            Text="Ir a la página del reloj"
+            FontSize="24"
+            HorizontalOptions="Center"
+            Clicked="OnBotonRelojClicked"/>
+    </VerticalStackLayout>
 </ContentPage>
