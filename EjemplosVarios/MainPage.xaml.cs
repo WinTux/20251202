@@ -2,23 +2,19 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
+            // Configurar el temporizador para actualizar el reloj cada segundo
+            var temporizador = new System.Timers.Timer(1000); // 1000 ms = 1 segundo
+            temporizador.Elapsed += new System.Timers.ElapsedEventHandler(RedibujarReloj);
+            temporizador.Start();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        public void RedibujarReloj(object? sender, System.Timers.ElapsedEventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            var graficosView = this.relojGraphicsView;
+            graficosView.Invalidate();
         }
     }
 }
