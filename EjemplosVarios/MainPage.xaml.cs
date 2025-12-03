@@ -11,5 +11,9 @@
         {
             await Shell.Current.GoToAsync(nameof(Pages.RelojPage));
         }
+        async void OnBotonScannerClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Pages.ScannerPage));
+        }
     }
 }

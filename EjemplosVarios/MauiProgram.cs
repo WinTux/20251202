@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using ZXing.Net.Maui;
 
 namespace EjemplosVarios
 {
@@ -14,6 +15,7 @@ namespace EjemplosVarios
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+            builder.UseBarcodeReader(); // Configura el uso del lector de códigos de barras
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddTransient<Pages.RelojPage>();
 #if DEBUG

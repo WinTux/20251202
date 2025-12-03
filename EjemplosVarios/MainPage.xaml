@@ -15,5 +15,10 @@
             FontSize="24"
             HorizontalOptions="Center"
             Clicked="OnBotonRelojClicked"/>
+        <Button 
+            Text="Ir al ejemplo de scanner QR"
+            FontSize="24"
+            HorizontalOptions="Center"
+            Clicked="OnBotonScannerClicked"/>
     </VerticalStackLayout>
 </ContentPage>
