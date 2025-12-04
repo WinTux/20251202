@@ -15,5 +15,10 @@
         {
             await Shell.Current.GoToAsync(nameof(Pages.ScannerPage));
         }
+
+        async void OnBotonTrazosClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Pages.TrazosPage));
+        }
     }
 }

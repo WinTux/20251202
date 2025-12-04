@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjemplosVarios.Pages.TrazosPage"
+             xmlns:ctool="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             Title="Captura de trazos">
+    <VerticalStackLayout>
+        <Label 
+            Text="Pizarra"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <ctool:DrawingView
+            x:Name="lienzo"
+            BackgroundColor="LightGray"
+            WidthRequest="300"
+            HeightRequest="300"
+            HorizontalOptions="Center"
+            IsMultiLineModeEnabled="True"
+            LineColor="Tomato"
+            LineWidth="15"
+            DrawingLineCompleted="OnLineaDibujada"/>
+        <Image 
+            x:Name="imagenTrazos"
+            HeightRequest="200"
+            HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

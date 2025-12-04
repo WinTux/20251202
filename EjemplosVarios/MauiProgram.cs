@@ -20,6 +20,7 @@ namespace EjemplosVarios
             builder.UseBarcodeReader(); // Configura el uso del lector de códigos de barras
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddTransient<Pages.RelojPage>();
+            builder.Services.AddTransient<Pages.TrazosPage>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

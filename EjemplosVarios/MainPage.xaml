@@ -20,5 +20,10 @@
             FontSize="24"
             HorizontalOptions="Center"
             Clicked="OnBotonScannerClicked"/>
+        <Button 
+            Text="Ir al ejemplo de Captura de Trazos"
+            FontSize="24"
+            HorizontalOptions="Center"
+            Clicked="OnBotonTrazosClicked"/>
     </VerticalStackLayout>
 </ContentPage>
