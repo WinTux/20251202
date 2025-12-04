@@ -30,5 +30,9 @@
 	<string>Assets.xcassets/appicon.appiconset</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Esta aplicación quiere usar tu cámara</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Permite acceder a la ubicación cuando la app está en uso.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>La aplicación necesita acceso a tu ubicación para funcionar correctamente.</string>
 </dict>
 </plist>

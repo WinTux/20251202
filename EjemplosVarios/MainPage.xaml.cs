@@ -20,5 +20,9 @@
         {
             await Shell.Current.GoToAsync(nameof(Pages.TrazosPage));
         }
+        async void OnBotonMapasClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Pages.MapasPage));
+        }
     }
 }

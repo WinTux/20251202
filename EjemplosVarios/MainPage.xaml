@@ -25,5 +25,10 @@
             FontSize="24"
             HorizontalOptions="Center"
             Clicked="OnBotonTrazosClicked"/>
+        <Button 
+            Text="Ir al ejemplo demapas"
+            FontSize="24"
+            HorizontalOptions="Center"
+            Clicked="OnBotonMapasClicked"/>
     </VerticalStackLayout>
 </ContentPage>

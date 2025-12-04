@@ -12,6 +12,7 @@ namespace EjemplosVarios
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseMauiMaps()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -21,6 +22,7 @@ namespace EjemplosVarios
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddTransient<Pages.RelojPage>();
             builder.Services.AddTransient<Pages.TrazosPage>();
+            builder.Services.AddTransient<Pages.MapasPage>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
