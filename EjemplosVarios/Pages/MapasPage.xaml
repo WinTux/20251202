@@ -9,7 +9,8 @@
         <mapa:Map 
             x:Name="mimapa"
             IsShowingUser="True"
-            IsTrafficEnabled="True">
+            IsTrafficEnabled="False"
+            MapClicked="OnMapaClic">
             <x:Arguments>
                 <mapa:MapSpan>
                     <x:Arguments>
@@ -24,6 +25,99 @@
                     </x:Arguments>
                 </mapa:MapSpan>
             </x:Arguments>
+            <mapa:Map.Pins>
+                <mapa:Pin
+                    Label="Plaza Bolivia"
+                    Address="Una plaza en mantenimiento"
+                    Type="Place">
+                    <mapa:Pin.Location>
+                        <ubicacion:Location>
+                            <x:Arguments>
+                                <x:Double>-16.507204461925344</x:Double>
+                                <x:Double>-68.126921552756</x:Double>
+                            </x:Arguments>
+                        </ubicacion:Location>
+                    </mapa:Pin.Location>
+                </mapa:Pin>
+            </mapa:Map.Pins>
+            <mapa:Map.MapElements>
+                <mapa:Polygon StrokeColor="#ecb273" StrokeWidth="7" FillColor="#99fde9b4">
+                    <mapa:Polygon.Geopath>
+                        <ubicacion:Location>
+                            <x:Arguments>
+                                <x:Double>-16.501842005381345</x:Double>
+                                <x:Double>-68.13123734689633</x:Double>
+                            </x:Arguments>
+                        </ubicacion:Location>
+                        <ubicacion:Location>
+                            <x:Arguments>
+                                <x:Double>-16.502070889250998</x:Double>
+                                <x:Double>-68.13103349902111</x:Double>
+                            </x:Arguments>
+                        </ubicacion:Location>
+                        <ubicacion:Location>
+                            <x:Arguments>
+                                <x:Double>-16.502221814333087</x:Double>
+                                <x:Double>-68.13128367421727</x:Double>
+                            </x:Arguments>
+                        </ubicacion:Location>
+                        <ubicacion:Location>
+                            <x:Arguments>
+                                <x:Double>-16.501989048185983</x:Double>
+                                <x:Double>-68.1314847146749</x:Double>
+                            </x:Arguments>
+                        </ubicacion:Location>
+                    </mapa:Polygon.Geopath>
+                </mapa:Polygon>
+                <mapa:Polyline StrokeColor="#ecb2f3" StrokeWidth="10">
+                    <mapa:Polyline.Geopath>
+                        <ubicacion:Location>
+                            <x:Arguments>
+                                <x:Double>-16.502299125442345</x:Double>
+                                <x:Double>-68.1312478410506</x:Double>
+                            </x:Arguments>
+                        </ubicacion:Location>
+                        <ubicacion:Location>
+                            <x:Arguments>
+                                <x:Double>-16.502608370382536</x:Double>
+                                <x:Double>-68.13189741348337</x:Double>
+                            </x:Arguments>
+                        </ubicacion:Location>
+                        <ubicacion:Location>
+                            <x:Arguments>
+                                <x:Double>-16.502526193453683</x:Double>
+                                <x:Double>-68.13230339625387</x:Double>
+                            </x:Arguments>
+                        </ubicacion:Location>
+                        <ubicacion:Location>
+                            <x:Arguments>
+                                <x:Double>-16.501622615972295</x:Double>
+                                <x:Double>-68.13292586431473</x:Double>
+                            </x:Arguments>
+                        </ubicacion:Location>
+                    </mapa:Polyline.Geopath>
+                </mapa:Polyline>
+                <mapa:Circle
+                    StrokeColor="#31a8d0"
+                    StrokeWidth="9"
+                    FillColor="#88a2e1e6">
+                    <mapa:Circle.Center>
+                        <ubicacion:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50417969636474</x:Double>
+                                <x:Double>-68.1311406377252</x:Double>
+                            </x:Arguments>
+                        </ubicacion:Location>
+                    </mapa:Circle.Center>
+                    <mapa:Circle.Radius>
+                        <mapa:Distance>
+                            <x:Arguments>
+                                <x:Double>45</x:Double>
+                            </x:Arguments>
+                        </mapa:Distance>
+                    </mapa:Circle.Radius>
+                </mapa:Circle>
+            </mapa:Map.MapElements>
         </mapa:Map>
     </Grid>
 </ContentPage>
