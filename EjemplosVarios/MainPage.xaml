@@ -4,7 +4,7 @@
              x:Class="EjemplosVarios.MainPage"
              Title="Ejemplos MAUI"
              xmlns:dibujable="clr-namespace:EjemplosVarios.Dibujables">
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="5" Spacing="5">
         <Label 
             Text="¡Bienvenido a MAUI!"
             FontSize="32"
@@ -13,37 +13,37 @@
         <Button 
             Text="Ir a la página del reloj"
             FontSize="24"
-            HorizontalOptions="Center"
+            HorizontalOptions="Fill"
             Clicked="OnBotonRelojClicked"/>
         <Button 
             Text="Ir al ejemplo de scanner QR"
             FontSize="24"
-            HorizontalOptions="Center"
+            HorizontalOptions="Fill"
             Clicked="OnBotonScannerClicked"/>
         <Button 
             Text="Ir al ejemplo de Captura de Trazos"
             FontSize="24"
-            HorizontalOptions="Center"
+            HorizontalOptions="Fill"
             Clicked="OnBotonTrazosClicked"/>
         <Button 
             Text="Ir al ejemplo demapas"
             FontSize="24"
-            HorizontalOptions="Center"
+            HorizontalOptions="Fill"
             Clicked="OnBotonMapasClicked"/>
         <Button 
             Text="Ir al ejemplo de videos"
             FontSize="24"
-            HorizontalOptions="Center"
+            HorizontalOptions="Fill"
             Clicked="OnBotonVideosClicked"/>
         <Button 
             Text="Ir al ejemplo de Grid"
             FontSize="24"
-            HorizontalOptions="Center"
+            HorizontalOptions="Fill"
             Clicked="OnBotonGridClicked"/>
         <Button 
             Text="Ir al ejemplo de Grid 2"
             FontSize="24"
-            HorizontalOptions="Center"
+            HorizontalOptions="Fill"
             Clicked="OnBotonGrid2Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
