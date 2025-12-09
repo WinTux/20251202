@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjemplosVarios.Pages.VideosPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="VideosPage">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label 
+            Text="Video por URL"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <toolkit:MediaElement
+            x:Name="video"
+            WidthRequest="400"
+            HeightRequest="220"
+            Source="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4">
+            
+        </toolkit:MediaElement>
+        <Label 
+            Text="Video local AspectFit"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <toolkit:MediaElement
+            x:Name="video1"
+            WidthRequest="400"
+            HeightRequest="400"
+            Source="embed://ForBiggerBlazes.mp4"
+            ShouldAutoPlay="False"
+            ShouldKeepScreenOn="True"
+            ShouldLoopPlayback="False"
+            Aspect="AspectFit">
+            </toolkit:MediaElement>
+        <Label 
+            Text="Video local AspectFill"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <toolkit:MediaElement
+            x:Name="video2"
+            WidthRequest="400"
+            HeightRequest="400"
+            Source="embed://ForBiggerBlazes.mp4"
+            ShouldAutoPlay="False"
+            ShouldKeepScreenOn="True"
+            ShouldLoopPlayback="False"
+            Aspect="AspectFill">
+            </toolkit:MediaElement>
+        <Label 
+            Text="Video local Fill"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <toolkit:MediaElement
+            x:Name="video3"
+            WidthRequest="400"
+            HeightRequest="400"
+            Source="embed://ForBiggerBlazes.mp4"
+            ShouldAutoPlay="False"
+            ShouldKeepScreenOn="True"
+            ShouldLoopPlayback="False"
+            Aspect="Fill">
+            </toolkit:MediaElement>
+        <Label 
+            Text="Video local - controles"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <toolkit:MediaElement
+            x:Name="video4"
+            WidthRequest="400"
+            HeightRequest="400"
+            Source="embed://ForBiggerBlazes.mp4"
+            ShouldAutoPlay="False"
+            ShouldKeepScreenOn="True"
+            ShouldLoopPlayback="False"
+            ShouldShowPlaybackControls="False"
+            Aspect="Fill">
+            </toolkit:MediaElement>
+        <Button 
+            x:Name="btn"
+            Text="Play/Pause"
+            Clicked="OnBotonClicked"
+            HorizontalOptions="Center"/>
+        <HorizontalStackLayout>
+            <Button
+                x:Name="volumenDown"
+                Text="-"
+                Clicked="OnVolumenDownclicked"
+                />
+            <Button
+                x:Name="volumenUp"
+                Text="+"
+                Clicked="OnVolumenUpclicked"
+                />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

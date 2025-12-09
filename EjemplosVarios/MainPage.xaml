@@ -30,5 +30,10 @@
             FontSize="24"
             HorizontalOptions="Center"
             Clicked="OnBotonMapasClicked"/>
+        <Button 
+            Text="Ir al ejemplo de videos"
+            FontSize="24"
+            HorizontalOptions="Center"
+            Clicked="OnBotonVideosClicked"/>
     </VerticalStackLayout>
 </ContentPage>

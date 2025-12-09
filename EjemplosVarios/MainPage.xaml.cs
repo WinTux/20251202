@@ -24,5 +24,9 @@
         {
             await Shell.Current.GoToAsync(nameof(Pages.MapasPage));
         }
+        async void OnBotonVideosClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Pages.VideosPage));
+        }
     }
 }
