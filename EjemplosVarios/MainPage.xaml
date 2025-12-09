@@ -35,5 +35,15 @@
             FontSize="24"
             HorizontalOptions="Center"
             Clicked="OnBotonVideosClicked"/>
+        <Button 
+            Text="Ir al ejemplo de Grid"
+            FontSize="24"
+            HorizontalOptions="Center"
+            Clicked="OnBotonGridClicked"/>
+        <Button 
+            Text="Ir al ejemplo de Grid 2"
+            FontSize="24"
+            HorizontalOptions="Center"
+            Clicked="OnBotonGrid2Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

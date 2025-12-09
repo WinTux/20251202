@@ -28,5 +28,13 @@
         {
             await Shell.Current.GoToAsync(nameof(Pages.VideosPage));
         }
+        async void OnBotonGridClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Pages.GridPage));
+        }
+        async void OnBotonGrid2Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Pages.Grid2Page));
+        }
     }
 }
