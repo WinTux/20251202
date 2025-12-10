@@ -50,5 +50,15 @@
             FontSize="24"
             HorizontalOptions="Fill"
             Clicked="OnBotonArchivosClicked"/>
+        <Button 
+            Text="Ir al ejemplo de cámara"
+            FontSize="24"
+            HorizontalOptions="Fill"
+            Clicked="OnBotonCamaraClicked"/>
+        <Button 
+            Text="Ir al ejemplo de cámara CTool"
+            FontSize="24"
+            HorizontalOptions="Fill"
+            Clicked="OnBotonCamara2Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

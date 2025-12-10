@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="EjemplosVarios.Pages.Camara2Page"
+             Title="Camara2Page">
+    <VerticalStackLayout>
+        <Label 
+            Text="Vista previa"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <toolkit:CameraView
+            x:Name="camara"
+            IsTorchOn="True"
+            WidthRequest="300"
+            HeightRequest="300"
+            MediaCaptured="OnCapturaTomada"/>
+        <Button 
+            Text="Tomar foto"
+            Clicked="OnTomarFotoClic"
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Resultado"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Image x:Name="imagen" HeightRequest="250" WidthRequest="250" HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

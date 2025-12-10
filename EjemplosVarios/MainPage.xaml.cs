@@ -40,5 +40,13 @@
         {
             await Shell.Current.GoToAsync(nameof(Pages.ArchivosPage));
         }
+        async void OnBotonCamaraClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Pages.CamaraPage));
+        }
+        async void OnBotonCamara2Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Pages.Camara2Page));
+        }
     }
 }
