@@ -27,6 +27,7 @@ namespace EjemplosVarios
             builder.Services.AddTransient<Pages.VideosPage>();
             builder.Services.AddTransient<Pages.GridPage>();
             builder.Services.AddTransient<Pages.Grid2Page>();
+            builder.Services.AddTransient<Pages.ArchivosPage>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

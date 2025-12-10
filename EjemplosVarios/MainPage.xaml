@@ -45,5 +45,10 @@
             FontSize="24"
             HorizontalOptions="Fill"
             Clicked="OnBotonGrid2Clicked"/>
+        <Button 
+            Text="Ir al ejemplo de archivos"
+            FontSize="24"
+            HorizontalOptions="Fill"
+            Clicked="OnBotonArchivosClicked"/>
     </VerticalStackLayout>
 </ContentPage>

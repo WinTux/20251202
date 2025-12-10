@@ -69,6 +69,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\ArchivosPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Grid2Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

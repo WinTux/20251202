@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjemplosVarios.Pages.ArchivosPage"
+             Title="Manejo de archivos">
+    <VerticalStackLayout>
+        <Label 
+            Text="Imagen seleccionada"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Image x:Name="imagen" HeightRequest="300" HorizontalOptions="Center"/>
+        <Button 
+            Text="Seleccionar imagen"
+            Clicked="OnElegirArchivoClic"
+            HorizontalOptions="Center" />
+        <Button 
+            Text="Seleccionar varias imagenes"
+            Clicked="OnElegirArchivo2Clic"
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

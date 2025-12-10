@@ -36,5 +36,9 @@
         {
             await Shell.Current.GoToAsync(nameof(Pages.Grid2Page));
         }
+        async void OnBotonArchivosClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Pages.ArchivosPage));
+        }
     }
 }

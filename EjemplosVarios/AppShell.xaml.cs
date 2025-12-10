@@ -12,6 +12,7 @@
             Routing.RegisterRoute(nameof(Pages.VideosPage), typeof(Pages.VideosPage));
             Routing.RegisterRoute(nameof(Pages.GridPage), typeof(Pages.GridPage));
             Routing.RegisterRoute(nameof(Pages.Grid2Page), typeof(Pages.Grid2Page));
+            Routing.RegisterRoute(nameof(Pages.ArchivosPage), typeof(Pages.ArchivosPage));
         }
     }
 }
