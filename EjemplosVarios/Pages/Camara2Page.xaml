@@ -6,7 +6,8 @@
              Title="Camara2Page">
     <VerticalStackLayout>
         <Label 
-            Text="Vista previa"
+            x:Name="info"
+            Text="Vista previa (Flash desactivado)"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <toolkit:CameraView
@@ -15,10 +16,35 @@
             WidthRequest="300"
             HeightRequest="300"
             MediaCaptured="OnCapturaTomada"/>
-        <Button 
-            Text="Tomar foto"
-            Clicked="OnTomarFotoClic"
-            HorizontalOptions="Center" />
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button
+                x:Name="ZoomOut"
+                Clicked="OnZoomOutClicked"
+                Text="-"/>
+            <Button 
+                Text="Tomar foto"
+                Clicked="OnTomarFotoClic"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="ZoomIn"
+                Clicked="OnZoomInClicked"
+                Text="+"/>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout  HorizontalOptions="Center">
+            <Button 
+                Text="Des. previa"
+                Clicked="OnDesactivarClic"
+                HorizontalOptions="Center" />
+            <Button 
+                Text="Flash"
+                Clicked="OnFlashClic"
+                HorizontalOptions="Center" />
+            <Button 
+                Text="Act. previa"
+                Clicked="OnActivarClic"
+                HorizontalOptions="Center" />
+        </HorizontalStackLayout>
         <Label 
             Text="Resultado"
             VerticalOptions="Center" 

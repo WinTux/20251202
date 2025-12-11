@@ -24,7 +24,7 @@
 		<ApplicationTitle>Portafolio Pepe</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.wintuxpepe.ejemplosvarios</ApplicationId>
+		<ApplicationId>com.wintux.maui</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
