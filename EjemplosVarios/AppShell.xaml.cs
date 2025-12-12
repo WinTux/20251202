@@ -15,6 +15,7 @@
             Routing.RegisterRoute(nameof(Pages.ArchivosPage), typeof(Pages.ArchivosPage));
             Routing.RegisterRoute(nameof(Pages.CamaraPage), typeof(Pages.CamaraPage));
             Routing.RegisterRoute(nameof(Pages.Camara2Page), typeof(Pages.Camara2Page));
+            Routing.RegisterRoute(nameof(Pages.MicPage), typeof(Pages.MicPage));
         }
     }
 }

@@ -60,5 +60,10 @@
             FontSize="24"
             HorizontalOptions="Fill"
             Clicked="OnBotonCamara2Clicked"/>
+        <Button 
+            Text="Ir al ejemplo de micrófono"
+            FontSize="24"
+            HorizontalOptions="Fill"
+            Clicked="OnBotonMicClicked"/>
     </VerticalStackLayout>
 </ContentPage>

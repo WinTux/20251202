@@ -34,5 +34,7 @@
 	<string>Permite acceder a la ubicación cuando la app está en uso.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>La aplicación necesita acceso a tu ubicación para funcionar correctamente.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>La aplicación necesita usar su micrófono.</string>
 </dict>
 </plist>

@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using Plugin.Maui.Audio;
 using ZXing.Net.Maui;
 
 namespace EjemplosVarios
@@ -21,6 +22,7 @@ namespace EjemplosVarios
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
             builder.UseBarcodeReader(); // Configura el uso del lector de códigos de barras
+            builder.Services.AddSingleton(AudioManager.Current);
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddTransient<Pages.RelojPage>();
             builder.Services.AddTransient<Pages.TrazosPage>();
@@ -31,6 +33,7 @@ namespace EjemplosVarios
             builder.Services.AddTransient<Pages.ArchivosPage>();
             builder.Services.AddTransient<Pages.CamaraPage>();
             builder.Services.AddTransient<Pages.Camara2Page>();
+            builder.Services.AddTransient<Pages.MicPage>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

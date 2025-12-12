@@ -48,5 +48,9 @@
         {
             await Shell.Current.GoToAsync(nameof(Pages.Camara2Page));
         }
+        async void OnBotonMicClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Pages.MicPage));
+        }
     }
 }
