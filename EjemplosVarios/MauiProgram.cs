@@ -22,6 +22,11 @@ namespace EjemplosVarios
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
             builder.UseBarcodeReader(); // Configura el uso del lector de códigos de barras
+            builder.Services.AddSingleton<Tools.AudioDatabase>(s =>
+            {
+                var rutaDB = Path.Combine(FileSystem.AppDataDirectory, "AudioGrabaciones.db3");
+                return new Tools.AudioDatabase(rutaDB);
+            });
             builder.Services.AddSingleton(AudioManager.Current);
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddTransient<Pages.RelojPage>();
