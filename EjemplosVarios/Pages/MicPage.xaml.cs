@@ -34,7 +34,7 @@ public partial class MicPage : ContentPage
                 };
                 await database.GuardarGrabacionAsync(registro);
             });
-			// Falta mostrar tabla de registros
+			LlenarTabla();
 		}
 		else
 		{
@@ -49,5 +49,46 @@ public partial class MicPage : ContentPage
 		using var fileStream = File.Create(rutaArchivo);
 		await stream.CopyToAsync(fileStream);
 		return rutaArchivo;
+    }
+	private async void LlenarTabla() { 
+		listaGrab.ItemsSource = await database.GetGrabacionesAsync();
+    }
+	private async void OnPlayClicked(object sender, EventArgs e)
+	{
+		int id = (int)((Button)sender).CommandParameter;
+		var grabacion = await database.GetGrabacionAsync(id);
+		if (grabacion != null && File.Exists(grabacion.Ruta))
+		{
+			var reproductor = AudioManager.Current.CreatePlayer(grabacion.Ruta);
+			reproductor.Play();
+		}
+		else { 
+			await DisplayAlert("Error", "No se encontró la grabación.", "OK");
+			return;
+        }
+    }
+	private async void OnRenombrarCompletado(object sender, EventArgs e)
+	{
+		var entry = (Entry)sender;
+		if (entry.BindingContext is GrabacionAudio grabacion) { 
+			grabacion.Nombre = entry.Text;
+			await database.ModificarGrabacionAsync(grabacion);
+        }
+    }
+	private async void OnEliminarClicked(object sender, EventArgs e)
+	{
+        int id = (int)((Button)sender).CommandParameter;
+        var grabacion = await database.GetGrabacionAsync(id);
+		bool confirmacion = await DisplayAlert("Confirmar", $"¿Eliminar la grabación '{grabacion.Nombre}'?", "Sí", "No");
+		if (!confirmacion) return;
+		if(File.Exists(grabacion.Ruta))
+			File.Delete(grabacion.Ruta);
+		await database.BorrarGrabacionAsync(grabacion);
+        LlenarTabla();
+    }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+		LlenarTabla();
     }
 }

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EjemplosVarios.Pages.MicPage"
              Title="Reportero">
-    <VerticalStackLayout>
+    <Grid RowDefinitions="Auto, Auto, *">
         <Label 
             Text="Mis grabaciones"
             VerticalOptions="Center" 
@@ -11,7 +11,35 @@
         <Button 
             x:Name="btnGrabar"
             Text="Grabar"
+            Grid.Row="1"
             Clicked="OnGrabarClic"
             HorizontalOptions="Center" />
-    </VerticalStackLayout>
+        <CollectionView
+            x:Name="listaGrab"
+            Grid.Row="2"
+            Margin="0,20,0,0"
+            SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Gray" Margin="0,5" BackgroundColor="Beige">
+                        <Grid ColumnDefinitions="*,Auto,Auto">
+                            <Entry Text="{Binding Nombre}"
+                                   TextColor="Black"
+                                   Grid.Column="0"
+                                   Completed="OnRenombrarCompletado"/>
+                            <Button Text="▶️"
+                                    Grid.Column="1"
+                                    CommandParameter="{Binding Id}"
+                                    Clicked="OnPlayClicked"/>
+                            <Button Text="🗑️"
+                                Grid.Column="2"
+                                TextColor="Red"
+                                CommandParameter="{Binding Id}"
+                                Clicked="OnEliminarClicked"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>
